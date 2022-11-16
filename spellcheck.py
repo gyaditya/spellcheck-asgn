@@ -1,4 +1,4 @@
-# Spell Check Starter
+# Spell Check ADITYA
 # This start code creates two lists
 # 1: dictionary: a list containing all of the words from "dictionary.txt"
 # 2: aliceWords: a list containing all of the words from "AliceInWonderland.txt"
