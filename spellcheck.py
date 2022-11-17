@@ -1,9 +1,5 @@
 # Spell Check ADITYA
-# This start code creates two lists
-# 1: dictionary: a list containing all of the words from "dictionary.txt"
-# 2: aliceWords: a list containing all of the words from "AliceInWonderland.txt"
-
-import re  # Needed for splitting text with a regular expression
+import re
 import time
 
 def main():
@@ -29,52 +25,60 @@ def main():
 
         #Slection 1
         if selection == "1":
-            userInput = "Please enter the word you want to search:\n"
+            userInput = input("Please enter the word you want to search:\n")
             userInput = userInput.lower()
             timeStart = time.time()
             found = linearSearch(dictionary, userInput)
             if found == -1:
-                print(userInput + " was not found in the dictionary\n")
                 endTimer = time.time()
-                print("Time Elapsed: " + str((endTimer - timeStart)) + " seconds")
+                print(userInput + " was not found in the dictionary\n")
+                print(f"Time Elapsed: {(endTimer - timeStart)}  seconds")
             else:
                 print(userInput + " was found in the dictionary at position " + str(found))
                 endTimer = time.time()
-                print("Time Elapsed: " + str((endTimer - timeStart)) + " seconds")
+                print(f"Time Elapsed: {(endTimer - timeStart)}  seconds")
 
         
 
         #Selection 2
         elif selection == "2":
-            userInput = "Please enter the word you want to search:\n"
+            userInput = input("Please enter the word you want to search:\n")
             userInput = userInput.lower()
             timeStart = time.time()
             found = binarySearch(dictionary, userInput)
             if found == -1:
+                endTimer = time.time()
                 print(userInput + " was not found in the dictionary\n")
-                endTimer = time.time()
-                print("Time Elapsed: " + str((endTimer - timeStart)) + " seconds")
+                print("Time Elapsed: " + (endTimer - timeStart) + " seconds")
             else:
-                print(userInput + " was found in the dictionary at position " + str(found))
                 endTimer = time.time()
-                print("Time Elapsed: " + str((endTimer - timeStart)) + " seconds")
+                print(userInput + " was found in the dictionary at position " + str(found))
+                print(f"Time Elapsed: {(endTimer - timeStart)}  seconds")
 
         
         #Selection 3
         elif selection == "3":
-           count = 0
-           timeStart = time.time()
-           for i in range(len(aliceWords)):
-               found = linearSearch(dictionary, i)
-               if found == -1:
-                   count += 1
-            endTimer = time.time()
-            print("Number of words that were not found in the dictonary: " + str(count)"\n" + "Time elapsed: " + str(endTimer = timerStart)) + "seconds")
-
+            count = 0
+            timeStart = time.time()
+            for i in range(len(aliceWords)):
+                found = linearSearch(dictionary, aliceWords[i])
+                if found == -1:
+                    count += 1
+            endtimer = time.time()
+            print(f"Total words not found: {(count)}")
+            print(f"Time Elapsed {(endtimer - timeStart)} seconds")    
+            
         #Selection 4
         elif selection == "4":
-            print("Placeholder")
-
+            count = 0
+            timeStart = time.time()
+            for i in range(len(aliceWords)):
+                found = binarySearch(dictionary, aliceWords[i])
+                if found == -1:
+                    count += 1
+            endtimer = time.time()
+            print(f"Total words not found: {(count)}")
+            print(f"Time Elapsed {(endtimer - timeStart)} seconds")    
         
         elif selection == "5":
             programLoop = False
