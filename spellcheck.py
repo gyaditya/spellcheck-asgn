@@ -31,10 +31,10 @@ def main():
             found = linearSearch(dictionary, userInput)
             if found == -1:
                 endTimer = time.time()
-                print(userInput + " was not found in the dictionary\n")
-                print(f"Time Elapsed: {(endTimer - timeStart)}  seconds")
+                print(f"{userInput} was not found in the dictionary\n")
+                print(f"Time Elapsed: {(endTimer - timeStart)}  seconds\n")
             else:
-                print(userInput + " was found in the dictionary at position " + str(found))
+                print(f"{userInput}  was found in the dictionary at position {found}")
                 endTimer = time.time()
                 print(f"Time Elapsed: {(endTimer - timeStart)}  seconds")
 
@@ -48,11 +48,11 @@ def main():
             found = binarySearch(dictionary, userInput)
             if found == -1:
                 endTimer = time.time()
-                print(userInput + " was not found in the dictionary\n")
-                print(f"Time Elapsed: {(endTimer - timeStart)} seconds")
+                print(f"{userInput} was not found in the dictionary\n")
+                print(f"Time Elapsed: {(endTimer - timeStart)} seconds]n")
             else:
                 endTimer = time.time()
-                print(userInput + " was found in the dictionary at position " + str(found))
+                print(f"{userInput}  was found in the dictionary at position {found}")
                 print(f"Time Elapsed: {(endTimer - timeStart)}  seconds")
 
         
