@@ -49,7 +49,7 @@ def main():
             if found == -1:
                 endTimer = time.time()
                 print(userInput + " was not found in the dictionary\n")
-                print("Time Elapsed: " + (endTimer - timeStart) + " seconds")
+                print(f"Time Elapsed: {(endTimer - timeStart)} seconds")
             else:
                 endTimer = time.time()
                 print(userInput + " was found in the dictionary at position " + str(found))
